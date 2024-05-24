@@ -10,7 +10,7 @@ const DynamicTime = dynamic(() => import('@/app/components/time'), {ssr: false})
 export default function Home() {
   const [apodPic, setApodPic] = useState();
   useEffect(() => {
-    fetch('https://api.nasa.gov/planetary/apod?api_key=c75M87HQeRMmEDKRDKsmWCeiMjSnBbaFDHYIHQG8')
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.NEXT_PUBLIC_NASA}`)
     .then(response => response.json())
     .then(data => setApodPic(data.url))
   },[])
