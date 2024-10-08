@@ -27,7 +27,7 @@ export default function Home() {
 
           <div className={'absolute text-white text-center bottom-2 w-[480px]'}><a href={'/bus'}>Bus</a></div>
 
-
+{/* stackblitz test */}
           <img alt='apod' src={apodPic} className={'h-[320px] w-[480px]'}/>
 
       </section>
